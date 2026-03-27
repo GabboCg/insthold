@@ -1,13 +1,10 @@
 # Institutional Ownership Breadth
----
 
 ## Overview
 
-This project constructs a quarterly panel of institutional ownership metrics for US common stocks using 13F filings (Thomson Reuters / WRDS) and CRSP monthly data, extended with [Bushee (1998, 2001)](https://accounting-faculty.wharton.upenn.edu/bushee/) investor-type classifications.
+An R pipeline to constructs a quarterly panel of institutional ownership metrics for US common stocks using 13F filings (Thomson Reuters / WRDS) and CRSP monthly data, extended with [Bushee (1998, 2001)](https://accounting-faculty.wharton.upenn.edu/bushee/) investor-type classifications.
 
 The output is `io_ts`: a stock × quarter dataset covering 2020–2025.
-
----
 
 ## Data Sources
 
@@ -20,24 +17,6 @@ The output is `io_ts`: a stock × quarter dataset covering 2020–2025.
 | Bushee `iiclass.txt` | Investor type classification (DED/QIX/TRA) | [Wharton](https://accounting-faculty.wharton.upenn.edu/bushee/) |
 
 A WRDS account with access to CRSP and Thomson Reuters 13F is required.
-
----
-
-## Pipeline
-
-```
-Step 1  get_crsp_m()      CRSP monthly → quarter-end panel  →  crso_m.csv
-        ↓
-Steps   get_insthold()    13F vintage merge → CUSIP/PERMNO map → share adjustment
-2–4     ↓
-Step 5  load.R            Security-level IO metrics
-        ↓
-Step 6  load.R            Merge with CRSP market data  →  io_ts
-        ↓
-Step 7  get_bushee()      Bushee DED/QIX/TRA classification  →  appended to io_ts
-```
-
----
 
 ## Output Variables (`io_ts`)
 
@@ -112,8 +91,6 @@ The script produces:
 - **`data/crso_m.csv`** — CRSP quarter-end panel (`permno × qdate`)
 - **`data/insthold_13f_s34.rds`** — Raw adjusted holdings (`permno × rdate × mgrno`)
 - **`data/io_ts.rds`** — Final stock-quarter panel with all ownership metrics
-
----
 
 ## References
 
