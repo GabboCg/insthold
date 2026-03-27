@@ -1,9 +1,4 @@
 # Institutional Ownership Breadth
-
-**Gabriel E. Cabrera-Guzmán**
-The University of Manchester — Spring 2026
-<https://gcabrerag.rbind.io>
-
 ---
 
 ## Overview
