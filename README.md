@@ -1,5 +1,8 @@
 # Institutional Ownership Breadth
 
+[![R](https://img.shields.io/badge/R-%3E%3D4.1-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
+[![WRDS](https://img.shields.io/badge/Data-WRDS-003366)](https://wrds-www.wharton.upenn.edu/)
+
 ## Overview
 
 An R pipeline to construct a quarterly panel of institutional ownership metrics for US common stocks using 13F filings (Thomson Reuters / WRDS) and CRSP monthly data, extended with [Bushee (1998, 2001)](https://accounting-faculty.wharton.upenn.edu/bushee/) investor-type classifications.

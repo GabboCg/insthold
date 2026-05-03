@@ -36,7 +36,8 @@ wrds <- dbConnect(
     port    = 9737,
     sslmode = "require",
     user    = Sys.getenv("WRDS_USER"),
-    password = Sys.getenv("WRDS_PASSWORD")
+    password = Sys.getenv("WRDS_PASSWORD"),
+    sslmode  = "require"
 )
 
 # Sample period
