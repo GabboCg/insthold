@@ -9,7 +9,7 @@ docs/
 .Rproj.user
 
 # Data
-data/*
+data/* 
 
 # Credentials
 .Renviron
