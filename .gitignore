@@ -8,6 +8,9 @@ docs/
 .Ruserdata
 .Rproj.user
 
+# Data
+data/*
+
 # Credentials
 .Renviron
 
