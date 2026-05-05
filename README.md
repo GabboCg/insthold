@@ -3,9 +3,11 @@
 [![R](https://img.shields.io/badge/R-%3E%3D4.1-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
 [![WRDS](https://img.shields.io/badge/Data-WRDS-003366)](https://wrds-www.wharton.upenn.edu/)
 
+An R pipeline to construct a quarterly panel of institutional ownership metrics for US common stocks using 13F filings (Thomson Reuters / WRDS) and CRSP monthly data, extended with [Bushee (1998, 2001)](https://accounting-faculty.wharton.upenn.edu/bushee/) investor-type classifications.
+
 ## Overview
 
-An R pipeline to construct a quarterly panel of institutional ownership metrics for US common stocks using 13F filings (Thomson Reuters / WRDS) and CRSP monthly data, extended with [Bushee (1998, 2001)](https://accounting-faculty.wharton.upenn.edu/bushee/) investor-type classifications.
+The pipeline merges CRSP common-stock data with Thomson Reuters 13F holdings and Bushee investor-type classifications, adjusts shares for splits at each filing's vintage date, and aggregates positions into per-stock quarterly metrics: total institutional ownership, number of owners, ownership concentration (HHI), change in breadth, and ratios broken out by Bushee type (Dedicated / Quasi-indexer / Transient).
 
 The output is `io_ts`: a stock × quarter dataset covering 2020–2025.
 
